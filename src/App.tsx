@@ -5,7 +5,7 @@ import EstiloGlobal, { Container } from './styles'
 
 import store from './store'
 import Home from './pages/Home'
-import Cadastro from './pages/Cadastro' // usaremos só para editar
+import Editar from './pages/Editar'
 import { ThemeProvider } from 'styled-components'
 import { useState } from 'react'
 import temaDark from './styles/themes/dark'
@@ -25,7 +25,7 @@ function App() {
     },
     {
       path: '/editar/:id',
-      element: <Cadastro trocaTema={trocaTema} />
+      element: <Editar trocaTema={trocaTema} />
     }
   ])
 

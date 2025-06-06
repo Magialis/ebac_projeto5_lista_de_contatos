@@ -53,8 +53,24 @@ export const ContatosContainer = styled.div`
   margin: 30px 10px;
   height: 60vh;
   overflow-y: auto;
+
   scrollbar-width: thin;
+  scrollbar-color: ${(props) => props.theme.corDeFundoContatoInfo} ${(props) => props.theme.corDeFundoMain};
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: ${(props) => props.theme.corDeFundoContatoInfo};
+    border-radius: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: ${(props) => props.theme.corDeFundoMain};
+  }
 `
+
 
 export const Titulo = styled.p`
   text-align: center;

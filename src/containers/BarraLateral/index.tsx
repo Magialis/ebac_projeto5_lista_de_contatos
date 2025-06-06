@@ -52,7 +52,6 @@ const BarraLateral = (props: Props) => {
   }, [contato])
 
   useEffect(() => {
-    // Cleanup do timeout quando o componente desmonta
     return () => {
       if (timeoutRef.current) clearTimeout(timeoutRef.current)
     }
@@ -71,7 +70,7 @@ const BarraLateral = (props: Props) => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
 
-    setSucesso('') // Limpa sucesso anterior
+    setSucesso('')
 
     if (!nome || !email || !telefone) {
       setErro('Por favor, preencha todos os campos.')
@@ -99,7 +98,6 @@ const BarraLateral = (props: Props) => {
       setSucesso('Contato adicionado!')
     }
 
-    // Limpa timeout anterior e cria novo para sumir a mensagem de sucesso
     if (timeoutRef.current) clearTimeout(timeoutRef.current)
     timeoutRef.current = setTimeout(() => setSucesso(''), 3000)
 

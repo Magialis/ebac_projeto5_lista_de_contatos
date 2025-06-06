@@ -5,7 +5,7 @@ type Props = {
   trocaTema: () => void
 }
 
-const Cadastro = ({ trocaTema }: Props) => {
+const Editar = ({ trocaTema }: Props) => {
   return (
     <>
       <BarraLateral trocaTema={trocaTema} />
@@ -14,4 +14,4 @@ const Cadastro = ({ trocaTema }: Props) => {
   )
 }
 
-export default Cadastro
+export default Editar
