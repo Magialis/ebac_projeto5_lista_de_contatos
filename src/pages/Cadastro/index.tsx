@@ -1,0 +1,17 @@
+import ListaDeContatos from '../../containers/ListaDeContatos'
+import BarraLateral from '../../containers/BarraLateral'
+
+type Props = {
+  trocaTema: () => void
+}
+
+const Cadastro = ({ trocaTema }: Props) => {
+  return (
+    <>
+      <BarraLateral trocaTema={trocaTema} />
+      <ListaDeContatos />
+    </>
+  )
+}
+
+export default Cadastro
